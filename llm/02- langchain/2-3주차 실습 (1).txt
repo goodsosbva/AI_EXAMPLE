@@ -1,0 +1,26 @@
+랭체인을 이용한 금융 챗봇
+https://colab.research.google.com/drive/1F2hQMLnFNfP-ZG-vLDisz_YPXESylpMr?usp=sharing
+
+멀티모달 RAG
+https://colab.research.google.com/drive/14GZVT5aaMGXeUvBMyqoxj9hegilb1qMw?usp=sharing
+
+멀티턴과 멀티쿼리 도구선택 과제
+https://colab.research.google.com/drive/17gjU2sxqKjgjtAsVNatwIDgmidmoPS15?usp=sharing
+
+Plan and Execute Agent
+https://colab.research.google.com/drive/1ez4nwLLZOR2nUuRCPEWB8OEWxqQ32txc?usp=sharing
+
+BM-25와 앙상블 리트리버
+https://colab.research.google.com/drive/1P7clL3LUgcZxZVfB-24oxTTeRUcj7PAF?usp=sharing
+
+검색 성능 평가
+https://colab.research.google.com/drive/1beLkwGAtgx018y44tyiC1k--8WzwjeH0?usp=sharing
+
+임베딩 파인튜닝
+https://colab.research.google.com/drive/1E0UQrjJacZBTx3VKePKEj2pfWwTzTj2d?usp=sharing
+
+ReACT 에이전트
+https://colab.research.google.com/drive/13at38COfxu0n0vqDNBh2pwCdCgRMqZje?usp=sharing
+
+Function Calling
+https://colab.research.google.com/drive/1jZ0gwQF8bwQ5XYcdB91TEt_G-2GyegWz?usp=sharing
