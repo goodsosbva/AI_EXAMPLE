@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="golden-operation" content="create">
+  <meta name="expected-test-functions" content="test_page_load,test_navigation,test_form,test_accessibility,test_responsive">
+  <title>상품 등록 | CRUD 골든셋</title>
+  <link rel="stylesheet" href="golden.css">
+</head>
+<body>
+  <a class="skip" href="#main">본문으로 건너뛰기</a>
+  <header>
+    <div class="bar">
+      <p class="brand">CRUD 골든셋</p>
+      <nav aria-label="상품 관리">
+        <ul>
+          <li><a aria-current="page" href="create.html">등록</a></li>
+          <li><a href="read.html">조회</a></li>
+          <li><a href="update.html">수정</a></li>
+          <li><a href="delete.html">삭제</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <p class="eyebrow">CREATE</p>
+    <h1>새 상품 등록</h1>
+    <p class="lead">필수 입력, 숫자 범위, 제출 동작을 검증하는 골든 페이지입니다.</p>
+    <form class="card" action="read.html" method="get">
+      <div class="grid">
+        <label>상품명
+          <input name="name" required maxlength="80" autocomplete="off">
+        </label>
+        <label>카테고리
+          <select name="category" required>
+            <option value="">선택하세요</option>
+            <option>전자기기</option><option>생활용품</option><option>식품</option>
+          </select>
+        </label>
+        <label>가격
+          <input name="price" type="number" required min="0" max="10000000" step="100" inputmode="numeric">
+          <span class="hint">0원 이상, 100원 단위</span>
+        </label>
+        <label>재고
+          <input name="stock" type="number" required min="0" max="9999" inputmode="numeric">
+        </label>
+        <label class="full">상품 설명
+          <textarea name="description" maxlength="500"></textarea>
+        </label>
+      </div>
+      <div class="actions">
+        <button type="submit">상품 등록</button>
+        <button class="secondary" type="reset">입력 초기화</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>

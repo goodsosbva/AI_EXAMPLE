@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="golden-operation" content="update">
+  <meta name="expected-test-functions" content="test_page_load,test_navigation,test_form,test_accessibility,test_responsive">
+  <title>상품 수정 | CRUD 골든셋</title>
+  <link rel="stylesheet" href="golden.css">
+</head>
+<body>
+  <a class="skip" href="#main">본문으로 건너뛰기</a>
+  <header>
+    <div class="bar">
+      <p class="brand">CRUD 골든셋</p>
+      <nav aria-label="상품 관리">
+        <ul>
+          <li><a href="create.html">등록</a></li>
+          <li><a href="read.html">조회</a></li>
+          <li><a aria-current="page" href="update.html">수정</a></li>
+          <li><a href="delete.html">삭제</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <p class="eyebrow">UPDATE</p>
+    <h1>상품 정보 수정</h1>
+    <p class="lead">기존 값 표시와 수정 제출을 검증하는 골든 페이지입니다.</p>
+    <form class="card" action="read.html" method="get">
+      <input type="hidden" name="id" value="PRD-1042">
+      <div class="grid">
+        <label>상품 코드
+          <input value="PRD-1042" disabled aria-describedby="code-hint">
+          <span class="hint" id="code-hint">상품 코드는 수정할 수 없습니다.</span>
+        </label>
+        <label>상품명
+          <input name="name" required maxlength="80" value="무선 키보드">
+        </label>
+        <label>가격
+          <input name="price" type="number" required min="0" max="10000000" step="100" value="59000">
+        </label>
+        <label>재고
+          <input name="stock" type="number" required min="0" max="9999" value="24">
+        </label>
+        <label class="full">판매 상태
+          <select name="status" required>
+            <option selected>판매 중</option><option>품절</option><option>판매 중지</option>
+          </select>
+        </label>
+      </div>
+      <div class="actions">
+        <button type="submit">변경사항 저장</button>
+        <a class="button secondary" href="read.html">취소</a>
+      </div>
+    </form>
+  </main>
+</body>
+</html>
