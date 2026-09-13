@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="golden-operation" content="delete">
+  <meta name="expected-test-functions" content="test_page_load,test_navigation,test_form,test_accessibility,test_responsive">
+  <title>상품 삭제 | CRUD 골든셋</title>
+  <link rel="stylesheet" href="golden.css">
+</head>
+<body>
+  <a class="skip" href="#main">본문으로 건너뛰기</a>
+  <header>
+    <div class="bar">
+      <p class="brand">CRUD 골든셋</p>
+      <nav aria-label="상품 관리">
+        <ul>
+          <li><a href="create.html">등록</a></li>
+          <li><a href="read.html">조회</a></li>
+          <li><a href="update.html">수정</a></li>
+          <li><a aria-current="page" href="delete.html">삭제</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <p class="eyebrow">DELETE</p>
+    <h1>상품 삭제 확인</h1>
+    <p class="lead">파괴적 작업의 경고, 재확인, 취소 경로를 검증하는 골든 페이지입니다.</p>
+    <section class="card" aria-labelledby="delete-title">
+      <div class="warning" role="alert">
+        <h2 id="delete-title">이 작업은 되돌릴 수 없습니다</h2>
+        <p>상품과 연결된 공개 페이지가 목록에서 제거됩니다.</p>
+      </div>
+      <dl class="facts">
+        <dt>상품 코드</dt><dd>PRD-1042</dd>
+        <dt>상품명</dt><dd>무선 키보드</dd>
+        <dt>현재 재고</dt><dd>24개</dd>
+      </dl>
+      <form action="read.html" method="get">
+        <label for="confirm-code">확인을 위해 상품 코드 PRD-1042를 입력하세요</label>
+        <input id="confirm-code" name="confirm" required pattern="PRD-1042" title="PRD-1042를 정확히 입력하세요" autocomplete="off">
+        <p class="check">
+          <input id="ack" name="acknowledged" type="checkbox" required>
+          <label for="ack">삭제 후 복구할 수 없음을 확인했습니다.</label>
+        </p>
+        <div class="actions">
+          <button class="danger" type="submit">영구 삭제</button>
+          <a class="button secondary" href="read.html">취소</a>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

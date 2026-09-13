@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="golden-operation" content="read">
+  <meta name="expected-test-functions" content="test_page_load,test_navigation,test_form,test_accessibility,test_responsive">
+  <title>상품 조회 | CRUD 골든셋</title>
+  <link rel="stylesheet" href="golden.css">
+</head>
+<body>
+  <a class="skip" href="#main">본문으로 건너뛰기</a>
+  <header>
+    <div class="bar">
+      <p class="brand">CRUD 골든셋</p>
+      <nav aria-label="상품 관리">
+        <ul>
+          <li><a href="create.html">등록</a></li>
+          <li><a aria-current="page" href="read.html">조회</a></li>
+          <li><a href="update.html">수정</a></li>
+          <li><a href="delete.html">삭제</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <p class="eyebrow">READ</p>
+    <h1>상품 목록</h1>
+    <p class="lead">검색 폼, 표 구조, 행별 이동을 검증하는 골든 페이지입니다.</p>
+    <section class="card" aria-labelledby="list-title">
+      <h2 id="list-title">등록 상품</h2>
+      <form action="read.html" method="get" role="search">
+        <label for="query">상품 검색</label>
+        <div class="actions">
+          <input id="query" name="query" type="search" maxlength="80" placeholder="상품명 또는 상품 코드">
+          <button type="submit">검색</button>
+        </div>
+      </form>
+      <div class="table-wrap">
+        <table>
+          <caption>총 3개의 상품</caption>
+          <thead><tr><th scope="col">코드</th><th scope="col">상품명</th><th scope="col">가격</th><th scope="col">재고</th><th scope="col">상태</th><th scope="col">작업</th></tr></thead>
+          <tbody>
+            <tr><td>PRD-1042</td><th scope="row">무선 키보드</th><td>59,000원</td><td>24</td><td><span class="badge">판매 중</span></td><td><a href="update.html">수정</a></td></tr>
+            <tr><td>PRD-1043</td><th scope="row">USB-C 허브</th><td>39,000원</td><td>8</td><td><span class="badge">판매 중</span></td><td><a href="update.html">수정</a></td></tr>
+            <tr><td>PRD-1044</td><th scope="row">노트북 거치대</th><td>32,000원</td><td>0</td><td>품절</td><td><a href="update.html">수정</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
